@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<title>Yo Momma</title>
+
+<body>
+  <p>Current Momma</p>
+  <div id="joke">No excuse</div>
+</body>
+
+<script>
+  const myurl = "https://cors-anywhere.herokuapp.com/yomomma-api.herokuapp.com/jokes/";
+  console.log(myurl);
+  /*global fetch*/
+  fetch(myurl, {mode: 'cors'})
+    .then(function(response) {
+      return response.json();
+    }).then(function(json) {
+      console.log(json);
+      const joke = document.createTextNode(json["joke"]);
+      const container = document.getElementById("joke");
+      container.textContent = "";
+      container.appendChild(joke);
+    });
+</script>
+</html>
