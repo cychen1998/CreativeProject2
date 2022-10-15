@@ -1,5 +1,5 @@
 .page {
-  width: 700px;
+
   margin: 0 auto;
 }
 
@@ -10,9 +10,9 @@ body {
   text-align: center;
 }
 
-p {
+.page p {
   width: 100%;
-  margin-top: 250px;
+  margin-top: 40%;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -23,9 +23,32 @@ p {
   word-spacing: 2px;
 }
 
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75em;
+    font-family: Verdana, Geneva, sans-serif;
+    color: gray;
+}
+
+a:link {
+    color: #414141;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 #jokeButton {
   color: rgb(255, 255, 255); 
-  border-radius: 15px; 
+  border-radius: 15px;
   background-image: 
   linear-gradient(to right, rgb(221, 113, 45) 0%, rgb(255, 234, 19) 50%, rgb(224, 137, 43) 100%); 
   box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
@@ -34,6 +57,7 @@ p {
   height: 60px;
   font-size: 1.3em;
   font-family: Verdana, Geneva, sans-serif;
+  cursor: pointer;
 }
 
 #joke {
@@ -41,4 +65,20 @@ p {
     border-width: medium;
     padding: 15px;
     
+}
+
+@media only screen and (max-width: 600px) {
+    .page p {
+        font-size: 80px;
+    }
+    #jokeButton {
+        width: 85%;
+        font-size: 30px;
+    }
+    .footer {
+        font-size: 20px;
+    }
+    #joke {
+        font-size: 30px;
+    }
 }
