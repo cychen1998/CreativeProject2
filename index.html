@@ -7,13 +7,16 @@
 
 
 <body>
-  <p>Current Momma</p>
-  <div id="joke">No Momma is Safe</div>
+  <div class= 'page'>
+    <p>Current Momma</p>
   <input id="jokeButton" type="submit" value="Insult My Momma!"/>
+  <div id="joke">No Momma is Safe</div>
+  </div>
 </body>
 
 <script>
   document.getElementById("jokeButton").addEventListener("click", function(event) {
+      //event.preventDefault();
       const myurl = "https://cors-anywhere.herokuapp.com/yomomma-api.herokuapp.com/jokes/";
       console.log(myurl);
       /*global fetch*/
@@ -26,7 +29,7 @@
           const container = document.getElementById("joke");
           container.textContent = "";
           container.appendChild(joke);
-      })
+      });
 
     });
 </script>
